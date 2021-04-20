@@ -2,42 +2,37 @@ package com.elorrieta.primerdia;
 
 import java.util.Scanner;
 
-/**
- * @author Roberto Blanco Benito <br>
- *         Ejercicio 8
- * @see https://www.tutorialesprogramacionya.com/javaya/detalleconcepto.php?punto=8&codigo=81&inicio=0
- */
 public class TestearCosas {
 
 	public static void main(String[] args) {
-		// CREO LA ENTRADA DEL TECLADO
+
 		Scanner teclado = new Scanner(System.in);
-		// CREO LAS VARIABLES DE 3 NOTAS
-		float notauno = 0;
-		float notados = 0;
-		float notatres = 0;
 
-		// PIDO QUE EL USUARIO INTRODUZCA LA PRIMERA NOTA
-		System.out.println("Introduzca su primera nota:");
-		notauno = teclado.nextFloat();
+		// String nombre = "";
+		// boolean edad = false;
+		// int numero = 0;
+		int numero = 0;
+		System.out.println("Introduce un número");
+		do {
 
-		// PIDO QUE EL USUARIO INTRODUZCA LA SEGUNDA NOTA
-		System.out.println("Introduzca su segunda nota:");
-		notados = teclado.nextFloat();
+			try {
 
-		// PIDO QUE EL USUARIO INTRODUZCA LA TERCERA NOTA
-		System.out.println("Introduzca la tercera nota:");
-		notatres = teclado.nextFloat();
+				numero = Integer.parseInt(teclado.nextLine());
+			} catch (Exception e) {
+				System.out.println("Debe ingresar obligatoriamente un número entero.");
+			}
+		} while (numero < 10);
 
-		// HAGO LA MEDIA DE LAS 3 NOTAS
-		float notamedia = (notauno + notados + notatres) / 3;
-
-		// SI LA NOTA MEDIA ES MAYOR/IGUAL QUE 7 SERAS PROMOCIONADO
-		if (notamedia >= 7) {
-			System.out.println("Promocionado");
-		}
-
-		// CIERRO EL TECLADO
+		/*
+		 * do { System.out.println("Introduzca su nombre (minimo 5 letras)"); nombre =
+		 * teclado.nextLine(); } while (nombre.length() < 5);
+		 * 
+		 * System.out.println("Eres mayor de edad? Si o no"); String respuesta =
+		 * teclado.nextLine(); if ("s".equalsIgnoreCase(respuesta) ||
+		 * "Si".equalsIgnoreCase(respuesta)) { edad = true;
+		 * System.out.println("Eres mayor de edad"); } if (!edad) {
+		 * System.out.println("No eres mayor de edad"); }
+		 */
 		teclado.close();
 	}
 
