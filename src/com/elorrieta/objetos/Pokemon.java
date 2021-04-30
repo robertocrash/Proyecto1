@@ -1,10 +1,11 @@
 package com.elorrieta.objetos;
 
-public class Pokemon {
+public class Pokemon implements Cantarin {
 
 	public static final int PRECIO_MAXIMO = 2000;
 	public static final int PRECIO_MINIMO = 0;
 	// atributos
+	private int id = 0;
 	private String nombre;
 	private float precio;
 	private int numero;
@@ -13,10 +14,19 @@ public class Pokemon {
 	// constructor
 	public Pokemon() {
 		super();
+		this.id = 0;
 		this.nombre = "sin nombre";
 		this.precio = 0;
 		this.numero = 0;
 		this.isBrillante = false;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public Pokemon(String nombre, float precio) {
@@ -73,8 +83,14 @@ public class Pokemon {
 
 	@Override
 	public String toString() {
-		return "Pokemon [nombre=" + nombre + ", precio=" + precio + ", numero=" + numero + ", isBrillante="
-				+ isBrillante + "]";
+		return "Pokemon [id=" + id + ", nombre=" + nombre + ", precio=" + precio + ", numero=" + numero
+				+ ", isBrillante=" + isBrillante + "]";
+	}
+
+	@Override
+	public void cantar() {
+		// TODO Auto-generated method stub
+
 	}
 
 }

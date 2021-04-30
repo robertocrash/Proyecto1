@@ -10,7 +10,6 @@ public class CancionesPiperrak {
 	public static void main(String[] args) throws Exception {
 
 		int totalSegundos = 0;
-		int mediaSegundos = 0;
 		Cancion cMasLarga = new Cancion();
 		Cancion cMasCorta = new Cancion();
 		cMasCorta.setDuracion(Cancion.DURACION_MAXIMA);

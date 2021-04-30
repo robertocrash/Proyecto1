@@ -24,7 +24,7 @@ public class CrearObjetosPokemon {
 			// pikatxu
 			Pokemon p1 = new Pokemon();
 			p1.setNombre("Pikatxu");
-			p1.setPrecio(-20);
+			p1.setPrecio(20);
 			p1.setBrillante(true);
 			p1.setNumero(0);
 
@@ -63,8 +63,8 @@ public class CrearObjetosPokemon {
 				nombre = sc.nextLine();
 			} while (nombre.length() < 3);
 
-			System.out.println("Dime el precio en euros:");
 			do {
+				System.out.println("Dime el precio en euros:");
 				try {
 					precio = Float.parseFloat(sc.nextLine());
 				} catch (Exception e) {
